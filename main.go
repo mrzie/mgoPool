@@ -145,6 +145,7 @@ func (p *Pool) Release(s *mgo.Session) {
 }
 
 func CreatePool(url string, min uint, max uint) (p *Pool, err error) {
+	p = new(Pool)
 	p.db_url = url
 
 	if min > max {
